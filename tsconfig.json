@@ -2,9 +2,17 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "ESNext",
+    "moduleResolution": "node", // Cambia esto si es necesario
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+    "resolveJsonModule": true, // Para resolver JSON si usas algún archivo JSON
+    "baseUrl": "./", // Base para los paths relativos
+    "paths": {
+      "*": ["node_modules/*", "src/*"] // Resolución de módulos
+    }
+  },
+  "include": ["src/**/*"], // Incluye todos los archivos en la carpeta src
+  "exclude": ["node_modules", "dist"] // Excluye node_modules y dist
 }
