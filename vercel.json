@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "index.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "crons": [
+    {
+      "path": "/api",
+      "schedule": "0 9 * * *"
+    }
+  ]
+}
